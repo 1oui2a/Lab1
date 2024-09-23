@@ -30,6 +30,7 @@ let deleteTasks = (task)=>{
 
 addTask("work");
 listAllTasks();
+deleteTasks("arrange");
 
 
 // when using arrow functions, you use let or const instead of function
