@@ -18,10 +18,18 @@ let listAllTasks = ()=>{
 
 // deletes a task
 let deleteTasks = (task)=>{
-    let index = task.indexOf("move")
-        task.splice(index,2);
-            listAllTasks();
+
+    let index = task.indexOf(task);
+    if(index > -1){ 
+        task.splice(index,1);
+        console.log(task+" has been deleted");
+    } else {
+        console.log(task+"not found");
+    }
 }
+
+addTask("work");
+listAllTasks();
 
 
 // when using arrow functions, you use let or const instead of function
